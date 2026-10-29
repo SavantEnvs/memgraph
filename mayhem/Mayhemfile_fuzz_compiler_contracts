@@ -1,0 +1,9 @@
+project: savantenvs/memgraph
+target: fuzz_compiler_contracts
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_compiler_contracts/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_compiler_contracts
+    libfuzzer: true
+    timeout: 10

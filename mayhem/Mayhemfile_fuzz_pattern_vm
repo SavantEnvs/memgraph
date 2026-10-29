@@ -1,0 +1,9 @@
+project: savantenvs/memgraph
+target: fuzz_pattern_vm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_pattern_vm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_pattern_vm
+    libfuzzer: true
+    timeout: 10
